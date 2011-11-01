@@ -1,0 +1,30 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>Track Page Changes</title>
+	<script type="text/javascript" src="javascripts/jquery-1.4.2.min.js"></script>
+	<script type="text/javascript" src="javascripts/jquery.track.js"></script>
+	<script type="text/javascript" src="javascripts/jquery.app.js"></script>
+	<link href="stylesheets/Button.css" rel="stylesheet" type="text/css" />
+</head>
+<body>    
+   	<form id="editForm" method="post">
+    	<h2>Track Page Changes</h2>
+		<p>
+			<label for='name' style='float:left;text-align:right'>Name: </label><input type='text' id='name' name='name' value=''/>
+		</p>  			
+		<p>
+			<label for='exclude_changes' style='float:left;text-align:right'>Exclude Changes: </label><input type='text' id='exclude_changes' name='exclude_changes' class='exclude' value=''/>
+		</p>  			
+		<p>    
+			<label for='description' style='float:left;text-align:right'>Description: </label><textarea id='description' name='description' style='width:400px'></textarea>            
+		</p>          	
+		<p>
+			<label for='gender' style='float:left;text-align:right'>Gender: </label><select name='gender' id='gender' class='ddlDetail'><option value=''>Select</option><option value='Male'>Male</option><option value='Female'>Female</option></select>
+		</p>
+		<p id="buttons">               
+			<input Id='btnSave' name='btnSave' value='Save' class='button' type='submit' /> 
+		</p>
+	</form>		
+</body>
+</html>
