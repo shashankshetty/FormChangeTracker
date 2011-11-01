@@ -1,6 +1,8 @@
-$.fn.trackChanges = function(opts, beforeAction, afterAction) {
+$.fn.trackchanges = function(opts) {
     opts = jQuery.extend({
         events: "change",
+		beforeChangeAction: function() {},
+		afterChangeAction: function() {},
         exclude: null
     }, opts);
 
@@ -52,7 +54,7 @@ $.fn.trackChanges = function(opts, beforeAction, afterAction) {
             else if ($(element).is("input[type='text']") || $(element).is("textarea") || $(element).is("select")) {
                 __defaultState.set(element.id, element.value);
             }
-            attachAddToChangedElementsListEvent(element, opts.events, beforeAction, afterAction);
+            attachAddToChangedElementsListEvent(element, opts.events, opts.beforeChangeAction, opts.afterChangeAction);
         }
     });
 
